@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChatRoom - Real Time Chat</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <!-- ================================
+     JOIN SCREEN
+================================ -->
+
+<div id="join-screen" class="join-screen">
+
+    <div class="join-card">
+
+        <div class="join-icon">
+            💬
+        </div>
+
+        <h1>Welcome to ChatRoom</h1>
+
+        <p>Join the conversation and start chatting in real-time.</p>
+
+        <form id="join-form">
+
+            <label for="username-input">
+                Enter your username
+            </label>
+
+            <input
+                type="text"
+                id="username-input"
+                placeholder="e.g. Stalin"
+                autocomplete="off"
+                maxlength="20"
+            >
+
+            <p id="username-error" class="username-error"></p>
+
+            <button type="submit">
+                Join Chat
+                <span>➜</span>
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <div class="chat-app">
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div class="brand">
+                <span class="brand-icon">💬</span>
+
+                <div>
+                    <h1>ChatRoom</h1>
+                    <p>Real-time conversation</p>
+                </div>
+            </div>
+
+            <div class="member-status">
+                <span class="online-dot"></span>
+                <span id="memCount">0 Members Online</span>
+            </div>
+
+        </header>
+
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+
+                <div class="sidebar-header">
+                    <h2>Members</h2>
+                </div>
+
+                <div class="members-list" id="members-list">
+                    <!-- Online members will be added dynamically -->
+                </div>
+
+                    
+
+            </aside>
+
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+
+                <!-- Chat Header -->
+                <div class="chat-title">
+
+                    <div>
+                        <h2>General Chat</h2>
+                        <p>Messages are delivered in real-time</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Messages -->
+                <div id="messages" class="messages-container">
+                    <!-- Messages will be added dynamically using JavaScript -->
+                </div>
+
+
+                <!-- Message Input -->
+                <div class="message-input-area">
+
+                    <input
+                        type="text"
+                        id="userMsg"
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                    >
+
+                    <button id="send-btn" type="button">
+                        <span>Send</span>
+                        <span>➤</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
