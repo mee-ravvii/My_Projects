@@ -1,0 +1,160 @@
+/* ========================================
+   HOME LAYOUT
+======================================== */
+
+.home-layout {
+    width: 100%;
+
+    max-width: 1800px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   SIDEBAR SECTION
+======================================== */
+
+.sidebar-section {
+    width: 360px;
+
+    min-width: 360px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   PRODUCT SECTION
+======================================== */
+
+.product-section {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   MOBILE SIDEBAR OVERLAY
+======================================== */
+
+/*
+   Desktop pe overlay ki zarurat nahi hai.
+   Isliye hidden.
+*/
+
+.sidebar-overlay {
+    display: none;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* ------------------------------------
+       HOME LAYOUT
+    ------------------------------------ */
+
+    .home-layout {
+
+        width: 100%;
+
+        padding: 15px;
+
+        margin: 0;
+
+        display: block;
+
+    }
+
+
+    /* ------------------------------------
+       SIDEBAR DRAWER
+    ------------------------------------ */
+
+    .sidebar-section {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 300px;
+
+        max-width: 85vw;
+
+        height: 100vh;
+
+        z-index: 2000;
+
+        background: var(--card);
+
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+
+        overflow-y: auto;
+
+        box-shadow: 10px 0 35px rgba(0, 0, 0, 0.12);
+
+    }
+
+
+    /* ------------------------------------
+       SIDEBAR OPEN
+    ------------------------------------ */
+
+    .sidebar-section.mobile-sidebar-open {
+
+        transform: translateX(0);
+
+    }
+
+
+    /* ------------------------------------
+       PRODUCT SECTION
+    ------------------------------------ */
+
+    .product-section {
+
+        width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    /* ------------------------------------
+       DARK OVERLAY
+    ------------------------------------ */
+
+    .sidebar-overlay {
+
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 1500;
+
+        background: rgba(15, 23, 42, 0.45);
+
+        backdrop-filter: blur(2px);
+
+    }
+
+}

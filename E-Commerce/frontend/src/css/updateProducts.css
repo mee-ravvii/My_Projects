@@ -1,0 +1,170 @@
+.update-product-page {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 24px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* INPUTS */
+
+.update-product-page input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #f8f9fc;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.update-product-page input:focus {
+    border-color: var(--primary);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+.update-product-page input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* DESCRIPTION */
+
+.update-product-page input:nth-of-type(3) {
+    min-height: 80px;
+}
+
+
+/* UPDATE BUTTON */
+
+.update-product-btn {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.update-product-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+
+.update-product-btn:active {
+    transform: translateY(0);
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .update-product-page {
+        max-width: 90%;
+
+        margin: 35px auto;
+
+        padding: 28px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .update-product-page {
+        max-width: none;
+
+        width: calc(100% - 30px);
+
+        margin: 25px auto;
+
+        padding: 22px 18px;
+
+        border-radius: 20px;
+
+        gap: 15px;
+    }
+
+
+    .update-product-page input {
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+
+    .update-product-btn {
+        padding: 13px;
+
+        font-size: 15px;
+    }
+
+}
+
+.update-product-page label {
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: -10px;
+}

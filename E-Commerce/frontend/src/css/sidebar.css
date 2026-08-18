@@ -1,0 +1,281 @@
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 100%;
+
+    background: var(--card);
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+
+    top: 100px;
+}
+
+
+/* ========================================
+   SIDEBAR HEADER
+======================================== */
+
+.sidebar-header {
+    margin-bottom: 28px;
+    position: sticky;
+
+}
+
+
+.sidebar-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    letter-spacing: -0.5px;
+}
+
+
+.sidebar-header span {
+    color: var(--secondary-text);
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   CATEGORY LIST
+======================================== */
+
+.category-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   CATEGORY BUTTON
+======================================== */
+
+.category-btn {
+    width: 95%;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    text-transform: capitalize;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: var(--text);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   CATEGORY HOVER
+======================================== */
+
+.category-btn:hover {
+    background: var(--primary);
+
+    color: white;
+
+    transform: translateX(5px);
+
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.18);
+}
+
+
+/* ========================================
+   ACTIVE CATEGORY
+======================================== */
+
+.category-btn.active-category {
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow: 0 7px 18px rgba(99, 102, 241, 0.20);
+}
+
+
+/* ========================================
+   MOBILE SIDEBAR HEADER
+======================================== */
+
+.sidebar-mobile-header {
+    display: none;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .sidebar {
+
+        min-height: 100vh;
+
+        height: 100%;
+
+        padding: 24px 20px;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        position: static;
+
+    }
+
+
+    /* ------------------------------------
+       MOBILE HEADER
+    ------------------------------------ */
+
+    .sidebar-mobile-header {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .sidebar-mobile-header h2 {
+
+        margin: 0;
+
+        font-size: 22px;
+
+        font-weight: 700;
+
+        color: var(--text);
+
+    }
+
+
+    /* ------------------------------------
+       CLOSE BUTTON
+    ------------------------------------ */
+
+    .sidebar-close-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        background: #f3f4f6;
+
+        color: var(--text);
+
+        font-size: 25px;
+
+        line-height: 1;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        cursor: pointer;
+
+        transition: all 0.2s ease;
+
+    }
+
+
+    .sidebar-close-btn:hover {
+
+        background: #e5e7eb;
+
+        transform: rotate(90deg);
+
+    }
+
+
+    /* ------------------------------------
+       SIDEBAR HEADING
+    ------------------------------------ */
+
+    .sidebar-header {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .sidebar-header h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    /* ------------------------------------
+       CATEGORY BUTTON
+    ------------------------------------ */
+
+    .category-list {
+
+        gap: 12px;
+
+    }
+
+
+    .category-btn {
+
+        padding: 15px 16px;
+
+        font-size: 15px;
+
+    }
+
+
+    .category-btn:hover {
+
+        transform: none;
+
+    }
+
+}
